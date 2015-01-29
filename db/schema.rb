@@ -11,21 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129125500) do
-
-  create_table "fund_trackers", force: :cascade do |t|
-    t.datetime "completed_at"
-    t.string   "description"
-    t.float    "deposit"
-    t.float    "withdrawal"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+ActiveRecord::Schema.define(version: 20150129133438) do
 
   create_table "transactions", force: :cascade do |t|
     t.datetime "completed_at"
     t.string   "description"
-    t.float    "deposit_withdrawal"
+    t.float    "transaction_amount"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end

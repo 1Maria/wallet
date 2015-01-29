@@ -1,4 +1,6 @@
 class Transaction < ActiveRecord::Base
+  validates :transaction_amount, presence: true
+
   def self.current_balance
     current_balance = 0
     Transaction.all.each do |f|

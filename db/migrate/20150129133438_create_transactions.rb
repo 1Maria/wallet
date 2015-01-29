@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration
     create_table :transactions do |t|
       t.datetime :completed_at
       t.string :description
-      t.float :deposit_withdrawal
+      t.float :transaction_amount
 
       t.timestamps null: false
     end
